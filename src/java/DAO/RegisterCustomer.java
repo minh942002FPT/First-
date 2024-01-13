@@ -44,7 +44,7 @@ public void RegisterCustomer(String user, String pass, String email) {
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, "%" + user + "%");
-           
+            
             System.out.println(sql);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
